@@ -1,0 +1,20 @@
+self.createButton({
+    click_function = 'cycleGuildMode',
+    function_owner = Global,
+    label = "Beginner",
+    tooltip = "This mode will randomly select 3 Resource Guilds and 2 Basic Guilds.",
+    position = {-6.07,0.6,-4.0},
+    width = 850,
+    height = 520,
+    font_size = 140
+})
+
+self.createButton({
+    click_function = 'setupGame',
+    function_owner = Global,
+    label = 'Start Game',
+    position = {-6.67,0.6,3.45},
+    width = 1400,
+    height = 700,
+    font_size = 230
+})

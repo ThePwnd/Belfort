@@ -1,0 +1,1028 @@
+boxContents = {}
+
+--Bags
+boxCloth_GUID = 'ed9d74'
+bagCalendar_GUID = '574a5e'
+bagCollection_GUID = 'b0562b'
+bagDistricts_GUID = '37c1ee'
+bagPlayerRed_GUID = ''
+bagPlayerYellow_GUID = ''
+bagPlayerWhite_GUID = ''
+bagPlayerCyan_GUID = ''
+bagPlayerIndigo_GUID = ''
+bagCountersDistricts_GUID = 'b0abc8'
+bagGnomes_GUID = '3aa708'
+bagSetsGuilds_GUID = '239f78'
+bagSetsGuildsResource_GUID = 'b4f41e'
+bagSetsGuildsBasic_GUID = '820999'
+bagSetsGuildsInteractive_GUID = 'aec287'
+
+--Boards
+boardMenu_GUID = '359533'
+district1_GUID = '1295cf'
+district2_GUID = 'bc82b9'
+district3_GUID = '43909a'
+district4_GUID = '0a41d9'
+district5_GUID = '0249f9'
+boardCollection_GUID = '1ff665'
+boardCalendar_GUID = 'c8493b'
+boardPlayerRed_GUID = 'd90427'
+boardPlayerYellow_GUID = '3f41a5'
+boardPlayerWhite_GUID = 'e17605'
+boardPlayerCyan_GUID = 'f7a2da'
+boardPlayerIndigo_GUID = 'ca9256'
+
+--Cards
+deckProperty_GUID = '06ebb5'
+
+--Tokens
+markerCalendar_GUID = 'e0b8a8'
+
+--Counters
+countersDistricts = {
+    red = {
+        '65a9f7',
+        '78fe1d',
+        '7fce97',
+        '23e8c9',
+        '3eda7a'
+    },
+    yellow = {
+        '318f71',
+        '80358a',
+        'd8f8de',
+        '8ecfa1',
+        'bedaa4'
+    },
+    white = {
+        '76410a',
+        'f66fc2',
+        '9646fa',
+        'd6a5c2',
+        'f17200'
+    },
+    cyan = {
+        '79d106',
+        'd167ed',
+        '40cf32',
+        'be70c7',
+        'fe0e03'
+    },
+    indigo = {
+        '4fdd10',
+        '466151',
+        '9d4aa1',
+        '85dce7',
+        'c2844f'
+    }
+}
+
+--Gizmo values
+boardDistrictYLevel = 1.06
+counterDistrictYLevel = 1.15
+boardDistrictPlacements = {
+    {x=-6.25,z=-4.71},
+    {x=-8.22,z=5.98},
+    {x=1.32,z=11.14},
+    {x=9.16,z=3.68},
+    {x=6.44,z=-4.68}
+}
+boardDistrictRotations = {
+    [1]=179.89,
+    [2]=252.00,
+    [3]=324.01,
+    [4]=36.00,
+    [5]=179.89
+}
+boardDistrictScales = {
+    {x=3.50,z=3.50},
+    {x=3.50,z=3.51},
+    {x=3.50,z=3.50},
+    {x=3.50,z=3.50},
+    {x=3.48,x=3.51}
+}
+counterDistrictPlacements = {
+    red = {
+        {x=-2.58,z=-9.30},
+        {x=-11.81,z=1.23},
+        {x=-4.71,z=12.90},
+        {x=8.76,z=9.82},
+        {x=10.15,z=-3.60}
+    },
+    yellow = {
+        {x=-4.38,z=-9.30},
+        {x=-12.28,z=2.71},
+        {x=-3.36,z=13.88},
+        {x=10.23,z=8.86},
+        {x=9.63,z=-5.34}
+    },
+    white = {
+        {x=-6.28,z=-9.30},
+        {x=-12.80,z=4.27},
+        {x=-1.94,z=14.88},
+        {x=11.66,z=7.84},
+        {x=9.09,z=-6.98}
+    },
+    cyan = {
+        {x=-9.46,z=-6.10},
+        {x=-11.26,z=8.17},
+        {x=2.30,z=14.58},
+        {x=12.73,z=4.15},
+        {x=4.60,z=-9.30}
+    },
+    indigo = {
+        {x=-10.12,z=-4.07},
+        {x=-9.07,z=9.75},
+        {x=4.18,z=13.22},
+        {x=11.88,z=1.61},
+        {x=2.51,z=-9.30}
+    }
+}
+
+--Index utilities
+tokenGuildScale = 0.67
+guildPlacements = {
+    --District 1
+    {
+        x=-3.34,
+        y=1.21,
+        z=-7.69
+    },
+    --District 2
+    {
+        x=-10.32,
+        y=1.21,
+        z=2.24
+    },
+    --District 3
+    {
+        x=-2.88,
+        y=1.21,
+        z=11.79
+    },
+    --District 4
+    {
+        x=8.68,
+        y=1.21,
+        z=7.69
+    },
+    --District 5
+    {
+        x=8.46,
+        y=1.21,
+        z=-4.12
+    }
+}
+setupCalendar = {
+    {
+        guid = "c8493b", --Calendar board
+        position = {
+            x=-34.67,
+            y=0.99,
+            z=0
+        },
+        rotation = {
+            x=0,
+            y=180,
+            z=0
+        },
+        scale = {
+            x = 0.65,
+            y = 0.5,
+            z = 0.65
+        },
+        lock = true,
+        flip = false
+    },
+    {
+        guid = "e0b8a8", --Calendar marker
+        position = {
+            x=-39.53,
+            y=2.50,
+            z=3.84
+        },
+        rotation = {
+            x=0.00,
+            y=26.50,
+            z=180.00
+        },
+        scale = {
+            x = 1.8,
+            y = 1.8,
+            z = 1.8
+        },
+        lock = false,
+        flip = false
+    },
+    {
+        guid = "3aa708", --Bag of gnomes
+        position = {
+            x=-40.65,
+            y=0.77,
+            z=11.85
+        },
+        rotation = {
+            x = 0,
+            y = 0,
+            z = 0
+        },
+        scale = {
+            x = 1,
+            y = 1,
+            z = 1
+        },
+        lock = false,
+        flip = false
+    },
+    {
+        guid = "06ebb5", --Deck of property cards
+        position = {
+            x=-31.29,
+            y=1.90,
+            z=-0.73
+        },
+        rotation = {
+            x=0,
+            y=180,
+            z=0
+        },
+        scale = {
+            x=1.72,
+            y=1,
+            z=1.72
+        },
+        lock = false,
+        flip = true
+    }
+}
+setupCollection = {
+    {
+        guid = '1ff665', --Collection board
+        position = {
+            x=36.33,
+            y=0.99,
+            z=0.00
+        },
+        rotation = {
+            x=0.00,
+            y=270.00,
+            z=0.00
+        },
+        scale = {
+            x=0.48,
+            y=0.5,
+            z=0.48
+        }
+    },
+    {
+        guid = 'ab9360', --Wood bag
+        position = {
+            x=47.00,
+            y=0.94,
+            z=7.84
+        }
+    },
+    {
+        guid = '6345c1', --Stone bag
+        position = {
+            x=47.00,
+            y=0.94,
+            z=2.42
+        }
+    },
+    {
+        guid = '15cf40', --Iron bag
+        position = {
+            x=47.00,
+            y=0.94,
+            z=-2.42
+        }
+    },
+    {
+        guid = 'd7d411', --Gold bag
+        position = {
+            x=47.00,
+            y=0.94,
+            z=-7.84
+        }
+    }
+}
+indexColors = {"red","yellow","white","cyan","indigo"}
+indexRGBCodes = {
+    red = {
+        r=1,
+        g=0,
+        b=0,
+    },
+    yellow = {
+        r=0.976471,
+        g=0.870588,
+        b=0.101959,
+    },
+    white = {
+        r=1,
+        g=1,
+        b=1,
+    },
+    cyan = {
+        r=0.396077,
+        g=0.85098,
+        b=0.964706,
+    },
+    indigo = {
+        r=0.125489,
+        g=0,
+        b=0.435293,
+    },
+    gray = {
+        r=0.6,
+        g=0.6,
+        b=0.6
+    },
+    grayLight = {
+        r=0.75,
+        g=0.75,
+        b=0.75
+    },
+    black = {
+        r=0,
+        g=0,
+        b=0
+    },
+    green = {
+        r=0.195313,
+        g=0.703125,
+        b=0.171875
+    },
+    greenHover = {
+        r=0.101563,
+        g=0.355469,
+        b=0.089844
+    }
+}
+settingModeGuild = 1
+guildButtonOffset = 1
+indexModesGuild = {
+    {
+        label = "Beginner",
+        desc = "This mode will randomly select 3 Resource Guilds and 2 Basic Guilds."
+    },
+    {
+        label = "Normal",
+        desc = "This mode will randomly select 1 Resource Guild, 2 Basic Guilds, and 2 Interactive Guilds."
+    },
+    {
+        label = "Random",
+        desc = "This mode will randomly select 5 guilds of any types."
+    },
+    {
+        label = "Custom",
+        desc = "This mode allows you to specify which 5 guilds you would like to include."
+    },
+    {
+        label = "Manual",
+        desc = "This mode will not choose any guilds automatically, but instead leaves it to the players to choose which guilds to include and place them on the game board.  (Designed for people who prefer to play without scripting.)"
+    }
+}
+indexGuilds = {
+    {
+        GUID = 'a00b15',
+        name = "Architects",
+        click_function = "toggleGuildArchitects",
+        ability = "Build any one Property, Wall, or Guild; Pay normal cost minus 1 metal OR 2 of stone and/or wood."
+    },
+    {
+        GUID = '399022',
+        name = "Bandits",
+        click_function = "toggleGuildBandits",
+        ability = "Steal 1 metal OR 2 of stone and/or wood from one player, OR steal 1 stone or wood from up to 3 different players."
+    },
+    {
+        GUID = '3c6597',
+        name = "Bankers",
+        click_function = "toggleGuildBankers",
+        ability = "Collect 3 gold from the supply."
+    },
+    {
+        GUID = '8e62ed',
+        name = "Librarians",
+        click_function = "toggleGuildLibrarians",
+        ability = "Draw 3 cards from the deck, then discard 1 from your hand."
+    },
+    {
+        GUID = '005232',
+        name = "Masons",
+        click_function = "toggleGuildMasons",
+        ability = "Collect 4 stone from the supply."
+    },
+    {
+        GUID = '3c358a',
+        name = "Merchants",
+        click_function = "toggleGuildMerchants",
+        ability = "Trade 1 stone or wood for 1 metal up to twice; ALSO you get +3 Trading Post visits this turn."
+    },
+    {
+        GUID = 'c4c96b',
+        name = "Miners",
+        click_function = "toggleGuildMiners",
+        ability = "Collect 2 metal from the supply."
+    },
+    {
+        GUID = '5a565e',
+        name = "Recruiters",
+        click_function = "toggleGuildRecruiters",
+        ability = "Collect 1 Elf, Dwarf, or Gnome from the supply."
+    },
+    {
+        GUID = '3e2827',
+        name = "Sawyers",
+        click_function = "toggleGuildSawyers",
+        ability = "Collect 4 wood from the supply."
+    },
+    {
+        GUID = '199380',
+        name = "Spies",
+        click_function = "toggleGuildSpies",
+        ability = "All other players reveal 1 card; you may take 1 of them into your hand."
+    },
+    {
+        GUID = '8c9333',
+        name = "Thieves",
+        click_function = "toggleGuildThieves",
+        ability = "Steal 2 gold from 1 player, OR steal 1 gold from up to 3 different players."
+    },
+    {
+        GUID = 'cdab3a',
+        name = "Wizards",
+        click_function = "toggleGuildWizards",
+        ability = "Pick 2 locations of the same type and switch their ownership."
+    }
+}
+toggledGuilds = {}
+
+--[[ The onLoad event is called after the game save finishes loading. --]]
+function onLoad()
+    boxCloth = getObjectFromGUID(boxCloth_GUID)
+    boardMenu = getObjectFromGUID(boardMenu_GUID)
+    boardCalendar = getObjectFromGUID(boardCalendar_GUID)
+    boardCollection = getObjectFromGUID(boardCollection_GUID)
+
+    district1 = getObjectFromGUID(district1_GUID)
+    district2 = getObjectFromGUID(district2_GUID)
+    district3 = getObjectFromGUID(district3_GUID)
+    district4 = getObjectFromGUID(district4_GUID)
+    district5 = getObjectFromGUID(district5_GUID)
+    townCrier('Is this the Krusty Krab?')
+end
+
+function setupGame()
+    local params = {} --the table that will contain parameters for the takeObject() function
+    local counterYRotation = 0
+
+    print("Closing menu...")
+    boardMenu.destruct()
+    print("Unboxing game...")
+    unbox()
+    print("Setting up the calendar board...")
+    constructCalendarBoard()
+    print("Setting up the collection board...")
+    constructCollectionBoard()
+    print("Decluttering the table...")
+    print("Setting up the game board...")
+    constructGameBoard()
+    --constructPlayerBoards()
+end
+
+function cycleGuildMode(obj, player, alt)
+    local params = {}
+
+    if indexModesGuild[settingModeGuild].label == "Custom" then
+        collapseGuildList()
+    end
+
+    if alt then
+        if settingModeGuild > 1 then
+            settingModeGuild = settingModeGuild - 1
+        else
+            settingModeGuild = 5
+        end
+    else
+        if settingModeGuild < 5 then
+            settingModeGuild = settingModeGuild + 1
+        else
+            settingModeGuild = 1
+        end
+    end
+
+    params.index = 0
+    params.label = indexModesGuild[settingModeGuild].label
+    params.tooltip = indexModesGuild[settingModeGuild].desc
+    boardMenu.editButton(params)
+
+    if indexModesGuild[settingModeGuild].label == "Custom" then
+        displayGuildList()
+    end
+    clearTable(params)
+end
+
+function displayGuildList()
+    local params = {}
+
+    for i=1, 12 do
+        params.click_function = indexGuilds[i].click_function
+        params.owner = Global
+        params.label = indexGuilds[i].name
+        params.tooltip = indexGuilds[i].ability
+        params.position = {
+            -4.24,
+            0.6,
+            (i * 0.8) - 4.99
+        }
+        params.width = 600
+        params.height = 330
+        params.font_size = 90
+        if isGuildToggled(indexGuilds[i].GUID) then
+            params.color = indexRGBCodes.green
+            params.font_color = indexRGBCodes.white
+        else
+            if #toggledGuilds == 5 then
+                params.color = indexRGBCodes.gray
+                params.font_color = indexRGBCodes.grayLight
+            else
+                params.color = indexRGBCodes.white
+                params.font_color = indexRGBCodes.black
+            end
+        end
+        boardMenu.createButton(params)
+        clearTable(params)
+    end
+end
+
+function isGuildToggled(guildGUID)
+  for key, value in pairs(toggledGuilds) do
+      if value == guildGUID then
+          return true
+      end
+  end
+
+  return false
+end
+
+function toggleGuildGeneric(index)
+    local params = {}
+    local guildGUID = indexGuilds[index - guildButtonOffset].GUID
+    params.index = index
+
+    if toggledGuilds == nil then
+        print("***WARNING***: Toggled guild table is nil.  This will cause problems...")
+    end
+
+    if isGuildToggled(guildGUID) then
+        if #toggledGuilds == 5 then
+            unsuppressGuildButtons()
+        end
+        params.color = indexRGBCodes.white
+        params.font_color = indexRGBCodes.black
+        removeValueFromTable(toggledGuilds, guildGUID)
+    else
+        if #toggledGuilds == 5 then
+            broadcastToAll("The maximum number of guilds has been selected.  You must deselect another guild before you can include this one.", indexRGBCodes.red)
+        else
+            params.color = indexRGBCodes.green
+            params.font_color = indexRGBCodes.white
+            table.insert(toggledGuilds, guildGUID)
+            if #toggledGuilds == 5 then
+                suppressGuildButtons()
+            end
+        end
+    end
+
+    boardMenu.editButton(params)
+    clearTable(params)
+end
+
+function suppressGuildButtons()
+    for i=1, 12 do
+        local params = {}
+
+        if isGuildToggled(indexGuilds[i].GUID) then
+            --Do nothing
+        else
+            params.index = i + guildButtonOffset
+            params.click_function = nil
+            params.color = indexRGBCodes.gray
+            params.font_color = indexRGBCodes.
+            boardMenu.editButton(params)
+        end
+
+        clearTable(params)
+    end
+end
+
+function unsuppressGuildButtons()
+    for i=1, 12 do
+        local params = {}
+
+        if isGuildToggled(indexGuilds[i].GUID) then
+            --Do nothing
+        else
+            params.index = i + guildButtonOffset
+            params.click_function = indexGuilds[i].click_function
+            params.color = indexRGBCodes.white
+            params.font_color = indexRGBCodes.black
+            boardMenu.editButton(params)
+        end
+
+        clearTable(params)
+    end
+end
+
+function collapseGuildList()
+    --TODO
+      -- Change the initial value of i after adding additional buttons
+      -- for configuration (Note: button index begins at 0)
+    for i=guildButtonOffset + 12, guildButtonOffset + 1, -1 do
+        boardMenu.removeButton(i)
+    end
+end
+
+function toggleGuildArchitects()
+    toggleGuildGeneric(guildButtonOffset + 1)
+end
+
+function toggleGuildBandits()
+    toggleGuildGeneric(guildButtonOffset + 2)
+end
+
+function toggleGuildBankers()
+    toggleGuildGeneric(guildButtonOffset + 3)
+end
+
+function toggleGuildLibrarians()
+    toggleGuildGeneric(guildButtonOffset + 4)
+end
+
+function toggleGuildMasons()
+    toggleGuildGeneric(guildButtonOffset + 5)
+end
+
+function toggleGuildMerchants()
+    toggleGuildGeneric(guildButtonOffset + 6)
+end
+
+function toggleGuildMiners()
+    toggleGuildGeneric(guildButtonOffset + 7)
+end
+
+function toggleGuildRecruiters()
+    toggleGuildGeneric(guildButtonOffset + 8)
+end
+
+function toggleGuildSawyers()
+    toggleGuildGeneric(guildButtonOffset + 9)
+end
+
+function toggleGuildSpies()
+    toggleGuildGeneric(guildButtonOffset + 10)
+end
+
+function toggleGuildThieves()
+    toggleGuildGeneric(guildButtonOffset + 11)
+end
+
+function toggleGuildWizards()
+    toggleGuildGeneric(guildButtonOffset + 12)
+end
+
+function unbox()
+    local params = {}
+    for i=1, boxCloth.getQuantity() do
+        params.position = {
+            -50,
+            1,
+            33 - i * 3
+        }
+        --**IMPORTANT**--
+        --Take the objects from the bag while adding them to a table
+        --When constructing each board, loop through the table to find
+        --the appropriate object, then assign it to the respective
+        --variable
+        --This method works around the bug that causes the board
+        --construction functions to crash because it attempts to index
+        --a "nil" value, even though the object verifiably exists
+        boxContents[i] = boxCloth.takeObject(params)
+    end
+    boxCloth.destruct()
+end
+
+function constructCalendarBoard()
+    local bagCalendar
+    local targetObject
+    local params = {}
+    for key, value in pairs(boxContents) do
+        if value.guid == bagCalendar_GUID then
+            bagCalendar = value
+            break
+        end
+    end
+    for i=1, bagCalendar.getQuantity() do
+        params.guid = setupCalendar[i].guid
+        --params.position = setupCalendar[i].position
+        --params.rotation = setupCalendar[i].rotation
+        targetObject = bagCalendar.takeObject(params)
+        targetObject.setPosition(setupCalendar[i].position)
+        targetObject.setRotation(setupCalendar[i].rotation)
+        targetObject.setScale(setupCalendar[i].scale)
+        if setupCalendar[i].flip == true then
+            targetObject.flip()
+        end
+        targetObject.setLock(setupCalendar[i].lock)
+        clearTable(params)
+    end
+    bagCalendar.destruct()
+end
+
+function constructCollectionBoard()
+    local bagCollection
+    local targetObject
+    local params = {}
+    for key, value in pairs(boxContents) do
+        if value.guid == bagCollection_GUID then
+            bagCollection = value
+            break
+        end
+    end
+    params.guid = setupCollection[1].guid
+    params.position = setupCollection[1].position
+    params.rotation = setupCollection[1].rotation
+    targetObject = bagCollection.takeObject(params)
+    targetObject.setScale(setupCollection[1].scale)
+    targetObject.setLock(true)
+    clearTable(params)
+    for i=2, bagCollection.getQuantity() + 1 do
+        params.guid = setupCollection[i].guid
+        params.position = setupCollection[i].position
+        targetObject = bagCollection.takeObject(params)
+        targetObject.setLock(true)
+        clearTable(params)
+    end
+    bagCollection.destruct()
+end
+
+function constructGameBoard()
+    local bagDistricts
+    local bagCountersDistricts
+    local params = {}
+
+    for key, value in pairs(boxContents) do
+        if value.guid == bagDistricts_GUID then
+            bagDistricts = value
+            break
+        end
+    end
+
+    for key, value in pairs(boxContents) do
+        if value.guid == bagCountersDistricts_GUID then
+            bagCountersDistricts = value
+            break
+        end
+    end
+
+    --Iterate through district bag
+    for i=1, bagDistricts.getQuantity() do
+        --Set position and rotation based on data saved in respective tables
+        params.position = {
+            boardDistrictPlacements[i].x,
+            boardDistrictYLevel,
+            boardDistrictPlacements[i].z
+        }
+        params.rotation = {
+            0.0,
+            boardDistrictRotations[i],
+            0.0
+        }
+        bagDistricts.takeObject(params).setLock(true)
+        --Early testing showed this step may not be necessary, but is something of
+        --remnant from when the code was formatted differently.    I have kept it
+        --because it makes the code look cleaner.
+        clearTable(params)
+    end
+
+    --Don't forget to destroy the bag after it is empty
+    bagDistricts.destruct()
+
+    setupGuilds()
+
+    --Iterate through the bag of district counters
+    for i=1, 5 do
+        --Use a nested loop to iterate through the nested tables of data
+        --for the district counters
+        for j=1, 5 do
+            --Use this variable to account for the offset in the placement of
+            --counters, as the counters have to wrap around each district and
+            --their angle of rotation changes
+            if i < 4 then
+                counterYRotation = 72 * j - 72
+            else
+                counterYRotation = 72 * j
+            end
+            params.guid = countersDistricts[indexColors[i]][j]
+            params.position = {
+                counterDistrictPlacements[indexColors[i]][j].x,
+                counterDistrictYLevel,
+                counterDistrictPlacements[indexColors[i]][j].z
+            }
+            params.rotation = {0.0, counterYRotation, 0.0}
+            bagCountersDistricts.takeObject(params).setLock(true)
+        end
+    end
+
+    --Don't forget to destroy the bag when it's empty
+    bagCountersDistricts.destruct()
+end
+
+function setupGuilds()
+    local bagSetsGuilds
+    local bagSetsGuildsResource
+    local bagSetsGuildsBasic
+    local bagSetsGuildsInteractive
+    local guildCurrent
+    local setsGuilds = {}
+    local params = {}
+
+    for key, value in pairs(boxContents) do
+        if value.guid == bagSetsGuilds_GUID then
+            bagSetsGuilds = value
+            break
+        end
+    end
+
+    for i=1, bagSetsGuilds.getQuantity() do
+        params.position = {
+            x=-47,
+            y=1,
+            z=24 - i * 3
+        }
+        setsGuilds[i] = bagSetsGuilds.takeObject(params)
+    end
+
+    clearTable(params)
+
+    for key, value in pairs(setsGuilds) do
+        if value.guid == bagSetsGuildsResource_GUID then
+            bagSetsGuildsResource = value
+            break
+        end
+    end
+
+    for key, value in pairs(setsGuilds) do
+        if value.guid == bagSetsGuildsBasic_GUID then
+            bagSetsGuildsBasic = value
+            break
+        end
+    end
+
+    for key, value in pairs(setsGuilds) do
+        if value.guid == bagSetsGuildsInteractive_GUID then
+            bagSetsGuildsInteractive = value
+            break
+        end
+    end
+
+    bagSetsGuildsResource.shuffle()
+    bagSetsGuildsBasic.shuffle()
+    bagSetsGuildsInteractive.shuffle()
+
+    --Beginner mode
+    if settingModeGuild == 1 then
+        --Include 3 Resource Guilds
+        for i=1, 3 do
+            getGuildTokenFromBag(i, bagSetsGuildsResource)
+        end
+        --Include 2 Basic Guilds
+        for i=4, 5 do
+            getGuildTokenFromBag(i, bagSetsGuildsBasic)
+        end
+    --Normal mode
+    elseif settingModeGuild == 2 then
+        --Include 1 Resource Guild
+        getGuildTokenFromBag(1, bagSetsGuildsResource)
+        --Include 2 Basic Guilds
+        for i=2, 3 do
+            getGuildTokenFromBag(i, bagSetsGuildsBasic)
+        end
+        --Include 2 Interactive Guilds
+        for i=4, 5 do
+            getGuildTokenFromBag(i, bagSetsGuildsInteractive)
+        end
+    --Random mode
+    elseif settingModeGuild == 3 then
+        local params = {}
+        local currentGuild
+        --Move all guilds into a "master" bag first
+        for i=1, 4 do
+            currentGuild = bagSetsGuildsResource.takeObject(params)
+            bagSetsGuilds.putObject(currentGuild)
+            currentGuild = nil
+        end
+        for i=1, 4 do
+            currentGuild = bagSetsGuildsBasic.takeObject(params)
+            bagSetsGuilds.putObject(currentGuild)
+            currentGuild = nil
+        end
+        for i=1, 4 do
+            currentGuild = bagSetsGuildsInteractive.takeObject(params)
+            bagSetsGuilds.putObject(currentGuild)
+            currentGuild = nil
+        end
+
+        bagSetsGuilds.shuffle()
+
+        for i=1, 5 do
+            getGuildTokenFromBag(i, bagSetsGuilds)
+        end
+    elseif settingModeGuild == 4 then
+    elseif settingModeGuild == 5 then
+    else
+    end
+end
+
+function getGuildTokenFromBag(iteration, bag)
+    local params = {}
+    local currentGuild
+
+    params.position = {
+        guildPlacements[iteration].x,
+        guildPlacements[iteration].y,
+        guildPlacements[iteration].z
+    }
+    params.rotation = {
+        x=0,
+        y=198 + iteration * 72,
+        z=0
+    }
+    currentGuild = bag.takeObject(params)
+    clearTable(params)
+    currentGuild = nil
+end
+
+function transferGuildToken(iteration, bag)
+    local params = {}
+    local currentGuild
+
+    currentGuild = bag.takeObject(params)
+    clearTable(params)
+    currentGuild = nil
+end
+
+function constructPlayerBoards()
+
+end
+
+function objectLock(type)
+    if type == "board" then
+        return true
+    else return false
+    end
+end
+
+function objectFlip(type)
+    if type == "deck" then
+        return true
+    else return false
+    end
+end
+
+function townCrier(messageImportant)
+        print(messageImportant)
+end
+
+function removeValueFromTable(argTable, delVal)
+    for key, value in pairs(argTable) do
+        if argTable[key] == delVal then
+            table.remove(argTable, key)
+        end
+    end
+end
+
+function clearTable(table)
+    for key, value in pairs(table) do
+        table[key] = nil
+    end
+end
+
+function resetObjectBags(variable)
+    for key, value in pairs(boxContents) do
+        if boxContents[key].guid == bagCalendar_GUID then
+            variable = boxContents[key]
+            break
+        end
+    end
+end
+
+function objectExistenceTest()
+        bagDistricts = getObjectFromGUID(bagDistricts_GUID)
+        print(bagDistricts.guid)
+end
+
+function doNothing() end

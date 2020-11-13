@@ -1,0 +1,84 @@
+counterRed1_GUID = '65a9f7'
+counterRed2_GUID = '78fe1d'
+counterRed3_GUID = '7fce97'
+counterRed4_GUID = '23e8c9'
+counterRed5_GUID = '3eda7a'
+
+isColliding = false
+
+function onCollisionEnter(info)
+  -- collision_info table:
+  --   collision_object    Object
+  --   contact_points      Table     {Vector, ...}
+  --   relative_velocity   Vector
+  if info.collision_object.getName() == 'District 1' then
+    if isColliding == false then
+      local counterRed1 = getObjectFromGUID(counterRed1_GUID)
+      counterRed1.Counter.increment()
+      isColliding = true
+    end
+  elseif info.collision_object.getName() == 'District 2' then
+    if isColliding == false then
+      local counterRed2 = getObjectFromGUID(counterRed2_GUID)
+      counterRed2.Counter.increment()
+      isColliding = true
+    end
+  elseif info.collision_object.getName() == 'District 3' then
+    if isColliding == false then
+      local counterRed3 = getObjectFromGUID(counterRed3_GUID)
+      counterRed3.Counter.increment()
+      isColliding = true
+    end
+  elseif info.collision_object.getName() == 'District 4' then
+    if isColliding == false then
+      local counterRed4 = getObjectFromGUID(counterRed4_GUID)
+      counterRed4.Counter.increment()
+      isColliding = true
+    end
+  elseif info.collision_object.getName() == 'District 5' then
+    if isColliding == false then
+      local counterRed5 = getObjectFromGUID(counterRed5_GUID)
+      counterRed5.Counter.increment()
+      isColliding = true
+    end
+  end
+
+end
+
+function onCollisionExit(info)
+  -- collision_info table:
+  --   collision_object    Object
+  --   contact_points      Table     {Vector, ...}
+  --   relative_velocity   Vector
+  if info.collision_object.getName() == 'District 1' then
+    if isColliding == true then
+      local counterRed1 = getObjectFromGUID(counterRed1_GUID)
+      counterRed1.Counter.decrement()
+      isColliding = false
+    end
+  elseif info.collision_object.getName() == 'District 2' then
+    if isColliding == true then
+      local counterRed2 = getObjectFromGUID(counterRed2_GUID)
+      coutnerRed2.Counter.decrement()
+      isColliding = false
+    end
+  elseif info.collision_object.getName() == 'District 3' then
+    if isColliding == true then
+      local counterRed3 = getObjectFromGUID(counterRed3_GUID)
+      counterRed3.Counter.decrement()
+      isColliding = false
+    end
+  elseif info.collision_object.getName() == 'District 4' then
+    if isColliding == true then
+      local counterRed4 = getObjectFromGUID(counterRed4_GUID)
+      counterRed4.Counter.decrement()
+      isColliding = false
+    end
+  elseif info.collision_object.getName() == 'District 5' then
+    if isColliding == true then
+      local counterRed5 = getObjectFromGUID(counterRed5_GUID)
+      counterRed5.Counter.decrement()
+      isColliding = false
+    end
+  end
+end

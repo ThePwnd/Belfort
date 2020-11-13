@@ -1,0 +1,22 @@
+district1GUID = '1295cf'
+district2GUID = 'bc82b9'
+district3GUID = '43909a'
+district4GUID = '0a41d9'
+district5GUID = '0249f9'
+
+counterRed1_GUID
+
+--[[ The onLoad event is called after the game save finishes loading. --]]
+function onLoad()
+    distric
+    townCrier('Is this the Krusty Krab?')
+end
+
+function townCrier(messageImportant)
+    print(messageImportant)
+end
+
+--[[ The onUpdate event is called once per frame. --]]
+function onUpdate()
+    --[[ print('onUpdate loop!') --]]
+end
